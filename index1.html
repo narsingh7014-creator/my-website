@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Notes Website</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff7e5f, #00c6ff);
+      color: white;
+      text-align: center;
+    }
+
+    nav {
+      background: rgba(0,0,0,0.3);
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: yellow;
+    }
+
+    .container {
+      background: rgba(255,255,255,0.15);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      margin: 40px auto;
+      width: 80%;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    img {
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      width: 120px;
+      margin: 15px 0;
+    }
+
+    ul {
+      text-align: left;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: 95%;
+      }
+    }
+    p, li {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<nav> 
+  <nav>
+   <a href="index1.html">Home</a>
+    <a href="notes.html">Notes</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="container">
+    <h1>Welcome</h1>
+  </div>
+</nav>
+
+<body>
+
+ 
+  <!-- Main Content -->
+  <div class="container hidden">
+
+    <h1><i class="fa-solid fa-note-sticky"></i> My Notes Website</h1>
+    <section class="hidden">
+    <h2><i class="fa-solid fa-mobile-screen"></i> About Mobile Phones</h2>
+        </section>
+    <img src="mobile.png" alt="mobile">
+
+    <p>
+      Mobile phone ek portable device hai jo calls aur internet ke liye use hota hai.
+      Ye communication, entertainment aur learning me help karta hai.
+    </p>
+
+    <h3>✅ Advantages</h3>
+    <ul>
+      <li>Instant communication</li>
+      <li>Internet access</li>
+      <li>Entertainment</li>
+    </ul>
+
+    <h3>❌ Disadvantages</h3>
+    <ul>
+      <li>Addiction</li>
+      <li>Eye strain</li>
+      <li>Privacy risk</li>
+    </ul>
+
+    <a href="notes.pdf" download>
+  <button>Download Notes</button>
+</a>
+
+  </div>
+  <script>
+const elements = document.querySelectorAll('.hidden');
+
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    const position = el.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (position < screenHeight - 100) {
+      el.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
